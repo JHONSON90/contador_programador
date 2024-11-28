@@ -17,7 +17,8 @@ def indice () -> rx.Component:
                     rx.hstack(
                     rx.button(
                         rx.link(
-                            "Contador Publico", href="/hvcontador"
+                            "Contador Publico", href="/hvcontador",
+                            underline="hover"
                         ),
                         variant="outline",
                         color_scheme="gray",
@@ -26,7 +27,8 @@ def indice () -> rx.Component:
                     ),
                     rx.button(
                         rx.link(
-                            "Programador Web", href="/programador"
+                            "Programador Web", href="/programador",
+                            underline="hover"
                             ),
                         variant="outline",
                         color_scheme="gray",
@@ -57,9 +59,10 @@ def indice () -> rx.Component:
                         rx.hstack(
                         rx.button(
                             rx.link(
-                                "Contador Publico", href="/contador",
+                                "Contador Publico", href="/hvcontador",
                                 weight="light",
-                                size="1"
+                                size="1",
+                                underline="hover",
                             ),
                             variant="outline",
                             color_scheme="gray",   
@@ -70,7 +73,8 @@ def indice () -> rx.Component:
                             rx.link(
                                 "Programador Web", href="/programador",
                                 weight="light",
-                                size="1"
+                                size="1",
+                                underline="hover",
                                 ),
                             variant="outline",
                             color_scheme="gray",    

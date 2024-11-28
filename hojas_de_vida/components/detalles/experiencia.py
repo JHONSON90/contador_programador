@@ -14,14 +14,18 @@ def titulos (titulo:str) -> rx.Component:
 def habilidades(habilidad:str, valor:int) -> rx.Component:    
        return rx.box(
                 rx.vstack(
-                    rx.text(habilidad),
                     rx.progress(value=valor,
-                            color_scheme="gray",
-                            size="1",
-                            radius="medium"
+                                max=100,
+                                color_scheme="gray",
+                                size="1",
+                                radius="large",
+                                variant="surface"
                             ),
-                    width="100%"
+                    rx.text(habilidad),
+                    width="80%",
+                    spacing="0"
                         ),
+                    width="100%"
                 )
        
 def habilidades_personales(habilidad:str)-> rx.Component:
@@ -29,25 +33,31 @@ def habilidades_personales(habilidad:str)-> rx.Component:
         rx.text(habilidad)
     )
     
-def experiencia(fecha_inicial:str, fecha_final:str, empresa:str, cargo:str) ->rx.Component:
+def experiencia(fecha_inicial:str, fecha_final:str, empresa:str, cargo:str, metas:str) ->rx.Component:
     return rx.box(
         rx.hstack(
                 rx.badge(
                     rx.vstack(
-                        rx.text(fecha_inicial),
-                        rx.text("Hasta"),
-                        rx.text(fecha_final),
+                        rx.text(fecha_inicial, size="1"),
+                        rx.text("Hasta", size="1"),
+                        rx.text(fecha_final, size="1"),
+                        spacing="0",
+                        align="center"
                     ),
-                    radius="full",
+                    radius="medium",
                     margin=Size.DEFAULT.value,
-                    variant="outline",
+                    variant="surface",
                     color_scheme="gray",
                     ),
-                rx.text(
-                    rx.text.strong(empresa)
-                ),
-                rx.text(cargo),
+                rx.vstack(
+                    rx.text(
+                        rx.text.strong(empresa)
+                    ),
+                    rx.text(cargo), 
+                    rx.text.em(metas)
+                )
         ),
+        width="100%"
     )
     
 def estudios(titulo:str, institucion:str)-> rx.Component:
@@ -57,6 +67,7 @@ def estudios(titulo:str, institucion:str)-> rx.Component:
                     rx.text.strong(titulo)
                 ),
                 rx.text(institucion),
+                spacing="0"
         )
     )
 
