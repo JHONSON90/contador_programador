@@ -20,7 +20,7 @@ def indice () -> rx.Component:
                             "Contador Publico", href="/hvcontador",
                             underline="hover"
                         ),
-                        variant="outline",
+                        variant="ghost",
                         color_scheme="gray",
                         position="relative",
                         
@@ -30,7 +30,7 @@ def indice () -> rx.Component:
                             "Programador Web", href="/programador",
                             underline="hover"
                             ),
-                        variant="outline",
+                        variant="ghost",
                         color_scheme="gray",
                         position="relative",
                        
@@ -64,7 +64,7 @@ def indice () -> rx.Component:
                                 size="1",
                                 underline="hover",
                             ),
-                            variant="outline",
+                            variant="ghost",
                             color_scheme="gray",   
                             margin= Size.MEDIUM.value
                             
@@ -76,7 +76,7 @@ def indice () -> rx.Component:
                                 size="1",
                                 underline="hover",
                                 ),
-                            variant="outline",
+                            variant="ghost",
                             color_scheme="gray",    
                             margin= Size.MEDIUM.value
                             ),
