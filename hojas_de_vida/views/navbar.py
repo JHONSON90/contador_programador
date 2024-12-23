@@ -22,7 +22,7 @@ def navbar() -> rx.Component:
                 rx.hstack(
                     navbar_link("Home", "/"),
                     navbar_link("Contador Publico", "/hvcontador"),
-                    navbar_link("Programador","/programador"),
+                    navbar_link("Programador","/programadorsr"),
                     navbar_link("Acerca de mi", "/about"),
                             # rx.menu.item("Service 3"),
                     #navbar_link("Pricing", "/#"),

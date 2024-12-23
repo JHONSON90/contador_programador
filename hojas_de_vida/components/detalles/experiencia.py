@@ -36,35 +36,39 @@ def habilidades_personales(habilidad:str)-> rx.Component:
     )
     
 def experiencia(fecha_inicial:str, fecha_final:str, empresa:str, cargo:str, metas:str) ->rx.Component:
-    return rx.box(
-        rx.hstack(
-                rx.badge(
-                    rx.vstack(
-                        rx.text(fecha_inicial, size="1"),
-                        rx.text("Hasta", size="1"),
-                        rx.text(fecha_final, size="1"),
-                        spacing="0",
-                        align="center"
-                    ),
-                    radius="full",
-                    margin=Size.DEFAULT.value,
-                    variant="surface",
-                    size="3",
-                    color_scheme="gray",
-                    ),
-                rx.vstack(
-                    rx.spacer(spacing="2", direction="row"),
-                    rx.text(
-                        rx.text.strong(empresa)
-                    ),
-                    rx.text(cargo), 
-                    rx.text.em(metas, size="1"),
+    return rx.accordion.root(
+            rx.accordion.item(
+                header= rx.vstack(
+                    rx.hstack(
+                            rx.badge(rx.text(fecha_inicial, size="1"),
+                                radius="large",
+                                margin=Size.DEFAULT.value,
+                                variant="surface",
+                                size="3",
+                                color_scheme="gray",
+                                ),
+                            rx.text("Hasta", size="1"),
+                            rx.badge(rx.text(fecha_final, size="1"),
+                                radius="large",
+                                margin=Size.DEFAULT.value,
+                                variant="surface",
+                                size="3",
+                                color_scheme="gray",
+                            ),
+                            spacing="0",
+                            align="center",
+                            justify="center"
+                        ),
+                    rx.text(rx.text.strong(empresa)),
+                    rx.text(cargo),
                     spacing="0",
-                )
+                ),                
+                content= metas,
+            ),
+            collapsible=True,
+            variant="ghost",
+            width= "100%",
         ),
-        width="100%",
-        padding=Size.DEFAULT.value
-    )
     
 def estudios(titulo:str, institucion:str)-> rx.Component:
     return rx.box(

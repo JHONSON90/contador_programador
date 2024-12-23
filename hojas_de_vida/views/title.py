@@ -27,7 +27,7 @@ def indice () -> rx.Component:
                     ),
                     rx.button(
                         rx.link(
-                            "Programador Web", href="/programador",
+                            "Programador Web", href="/programadorsr",
                             underline="hover"
                             ),
                         variant="ghost",
@@ -71,7 +71,7 @@ def indice () -> rx.Component:
                         ),
                         rx.button(
                             rx.link(
-                                "Programador Web", href="/programador",
+                                "Programador Web", href="/programadorsr",
                                 weight="light",
                                 size="1",
                                 underline="hover",

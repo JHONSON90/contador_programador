@@ -5,7 +5,7 @@ from hojas_de_vida.views.navbar import navbar
 from hojas_de_vida.components.carta_presentacion.presentacion import componente_carta
 from hojas_de_vida.views.title import  indice
 from hojas_de_vida.views.contador import contador
-
+from hojas_de_vida.views.programador import srprogramador
 
 from rxconfig import config
 
@@ -37,12 +37,15 @@ def about() -> rx.Component:
        ),
     )
     
-def programador() -> rx.Component:
+def programadorsr() -> rx.Component:
         return rx.box(
-                navbar(), 
-        rx.vstack(
-          
-       ),
+        navbar(), 
+            rx.vstack(
+            srprogramador()
+        ),
+            background="url('/programador1.jpg')",
+            width="100%",
+            height="100%",
     )
 
 def hvcontador() -> rx.Component:
@@ -56,4 +59,4 @@ app = rx.App()
 app.add_page(index)
 app.add_page(about)
 app.add_page(hvcontador)
-app.add_page(programador)
+app.add_page(programadorsr)
