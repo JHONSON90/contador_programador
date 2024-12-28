@@ -6,9 +6,9 @@ from hojas_de_vida.components.carta_presentacion.presentacion import componente_
 from hojas_de_vida.views.title import  indice
 from hojas_de_vida.views.contador import contador
 from hojas_de_vida.views.programador import srprogramador
-
+from hojas_de_vida.style.styles_page import create_background_shapes, global_styles
 from rxconfig import config
-
+import hojas_de_vida.style.style_global as Style
 
 class State(rx.State):
     """The app state."""
@@ -17,16 +17,26 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
-    # Welcome Page (Index)
+    
     return rx.box(
-    #     navbar(), 
-    #     rx.vstack(
-    #         componente_carta(),
-    #    ),
-    indice(),
+        global_styles(),
+        create_background_shapes(),
+        rx.flex(
+            indice(),
+            position="absolute",
+            display="flex",
+            top="0",
+            right="0",
+            bottom="0",
+            left="0",
+            align_items="center",
+            justify_content="center",
+        ),
+        class_name="bg-gradient-to-br from-black via-[#19242B] to-[#446074]",
+        height="100vh",
+        overflow="hidden",
+        position="relative",
         width="100%",
-        #size="4"
-        
     )
     
 def about() -> rx.Component:
@@ -55,7 +65,11 @@ def hvcontador() -> rx.Component:
     )
 
 
-app = rx.App()
+app = rx.App(
+    stylesheets=Style.STYLESHEETS,
+    style=Style.BASE_STYLE
+    
+)
 app.add_page(index)
 app.add_page(about)
 app.add_page(hvcontador)

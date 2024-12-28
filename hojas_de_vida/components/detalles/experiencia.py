@@ -7,7 +7,7 @@ def titulos (titulo:str) -> rx.Component:
                 titulo,
                 size="3",
                 weight="medium",
-                color_scheme="gray"
+                #color_scheme="gray"
                 ),
     ),
     

@@ -15,7 +15,7 @@ def navbar() -> rx.Component:
                         border_radius="15%",
                     ),
                     rx.heading(
-                        "", size="7", weight="bold"
+                        "Edison Portilla", size="7", weight="bold"
                     ),
                     align_items="center",
                 ),
