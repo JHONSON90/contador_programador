@@ -5,6 +5,7 @@ class color(Enum):
     SECONDARY= "#4A5C6A"
     BACKGROUND= "#06141B"
     CONTENT= "#11212D"
+    BLOCKCOLOR = "#446074"
 
 class textColor(Enum):
     HEADER= "#9BA8AB"

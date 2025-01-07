@@ -50,18 +50,43 @@ def about() -> rx.Component:
 def programadorsr() -> rx.Component:
         return rx.box(
         navbar(), 
+            rx.flex(
             rx.vstack(
-            srprogramador()
-        ),
-            background="url('/programador1.jpg')",
+                srprogramador(),
+                width="100%"
+            ),
             width="100%",
-            height="100%",
+            align_items="center",
+            justify_content="center",
+        ),
+        class_name="bg-gradient-to-br from-black via-[#19242B] to-[#446074]",
+        min_height="100vh",
+        height="100%",
+        width="100%",
+        position="relative",
+        padding_top="4em",  # Añadir padding superior para compensar el navbar fijo,
+        overflow_y="auto"
     )
 
 def hvcontador() -> rx.Component:
-        return rx.box(
-                navbar(), 
-                contador()
+    return rx.box(
+        navbar(),
+        rx.flex(
+            rx.vstack(
+                contador(),
+                width="100%"
+            ),
+            width="100%",
+            align_items="center",
+            justify_content="center",
+        ),
+        class_name="bg-gradient-to-br from-black via-[#19242B] to-[#446074]",
+        min_height="100vh",
+        height="100%",
+        width="100%",
+        position="relative",
+        padding_top="4em",  # Añadir padding superior para compensar el navbar fijo,
+        overflow_y="auto"
     )
 
 

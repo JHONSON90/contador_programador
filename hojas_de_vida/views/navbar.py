@@ -14,9 +14,9 @@ def navbar() -> rx.Component:
                         height="100%",
                         border_radius="15%",
                     ),
-                    rx.heading(
-                        "Edison Portilla", size="7", weight="bold"
-                    ),
+                    # rx.heading(
+                    #     "Edison Portilla", size="7", weight="bold"
+                    # ),
                     align_items="center",
                 ),
                 rx.hstack(
@@ -34,7 +34,7 @@ def navbar() -> rx.Component:
                 justify="between",
                 align_items="center",
                 width="100%",
-                height="25%"
+                height="25%",
             ),
         ),
         rx.mobile_and_tablet(
@@ -75,13 +75,14 @@ def navbar() -> rx.Component:
             width="100%"
         ),
         bg=rx.color("black", 3),
-        padding=size.DEFAULT.value,
+        margin_right = size.SMALL.value,
+        padding=size.MEDIUM.value,
         direction= "left",
         #justify="between",
         align_items="center",
-        position="left",
+        position="fixed",
         top=size.MEDIUM.value,
         z_index="5",
-        width="auto",
+        width="100%",
         
     )
