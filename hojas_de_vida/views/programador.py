@@ -191,55 +191,124 @@ def srprogramador() -> rx.Component:
                 rx.grid(
                      rx.card(
                          rx.center(
-                             habilidades("Python", 80 ),
+                             rx.image(src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+                                 width = "40px",
+                                 height = "40px"),
+                             habilidades("Python", 80 ),    
                              width = "100%",
                              height = "100%",
                          ),
                     height="100px",
                     width="100%",
+                    padding=Size.EXTRA.value
                 ),
                       rx.card(
-                          rx.center(habilidades("Flet", 80 ),
+                          rx.center(
+                              rx.image(src="/assets/FLET_LOGO.png",
+                                 width = "40px",
+                                 height = "40px"),
+                              habilidades("Flet", 80 ),
                                     width = "100%",
                              height = "100%",),
                     height="100px",
-                    width="100%"
+                    width="100%",
+                    padding=Size.EXTRA.value
                 ), 
                      rx.card(
-                         rx.center(habilidades("Reflex", 70 ),
+                         rx.center(
+                             rx.image(src="/assets/REFLEX_LOGO.png",
+                                 width = "40px",
+                                 height = "40px"),
+                             habilidades("Reflex", 70 ),
                                    width = "100%",
                              height = "100%",
                                    ),
                     height="100px",
-                    width="100%"
+                    width="100%",
+                    padding=Size.EXTRA.value
                 ),
                       rx.card(
-                    rx.center(habilidades("HTML/CSS", 60 ),
+                    rx.center(
+                        rx.image(src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+                                 width = "40px",
+                                 height = "40px"),
+                        habilidades("HTML/CSS", 60 ),
                               width = "100%",
                              height = "100%",
                              ),
                     height="100px",
-                    width="100%"
+                    width="100%",
+                    padding=Size.EXTRA.value
                 ),
                      rx.card(
-                    rx.center(habilidades("Javascript", 60 ),
+                    rx.center(
+                        rx.image(src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+                                 width = "40px",
+                                 height = "40px"),
+                        habilidades("Javascript", 60 ),
                               width = "100%",
                              height = "100%",
                              ),
                     height="100px",
-                    width="100%"
+                    width="100%",
+                    padding=Size.EXTRA.value
                 ),
                       rx.card(
-                    rx.center(habilidades("React", 50),
+                    rx.center(
+                        rx.image(src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+                                 width = "40px",
+                                 height = "40px"),
+                        habilidades("React", 50),
                               width = "100%",
                              height = "100%",
                               ),
                     height="100px",
-                    width="100%"
+                    width="100%",
+                    padding=Size.EXTRA.value
+                ),
+                      rx.card(
+                    rx.center(
+                        rx.image(src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+                                 width = "40px",
+                                 height = "40px"),
+                        habilidades("Postgress", 50),
+                              width = "100%",
+                             height = "100%",
+                              ),
+                    height="100px",
+                    width="100%",
+                    padding=Size.EXTRA.value
+                ),
+                       rx.card(
+                    rx.center(
+                        rx.image(src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
+                                 width = "40px",
+                                 height = "40px"),
+                        habilidades("FastApi", 50),
+                              width = "100%",
+                             height = "100%",
+                              ),
+                    height="100px",
+                    width="100%",
+                    padding=Size.EXTRA.value
+                ),
+                        rx.card(
+                    rx.center(
+                        rx.image(src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+                                 width = "40px",
+                                 height = "40px"),
+                        habilidades("MySQL", 50),
+                              width = "100%",
+                             height = "100%",
+                              ),
+                    height="100px",
+                    width="100%",
+                    padding=Size.EXTRA.value
                 ),
                       columns="3",
                       spacing="4",
                       width="100%",
+                      margin= Size.MEDIUM.value
                 ),
             
                 align="center",
@@ -252,5 +321,6 @@ def srprogramador() -> rx.Component:
         ),
         width = "100%",
         spacing="4em",
+        margin = Size.DEFAULT.value
     )
 #https://es.wallpapers.com/fondos-de-pantalla/rutinade-codificacion-minimalista-ih0aeqolwl5awdmh.html

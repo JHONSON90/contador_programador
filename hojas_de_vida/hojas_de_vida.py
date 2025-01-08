@@ -6,9 +6,10 @@ from hojas_de_vida.components.carta_presentacion.presentacion import componente_
 from hojas_de_vida.views.title import  indice
 from hojas_de_vida.views.contador import contador
 from hojas_de_vida.views.programador import srprogramador
-from hojas_de_vida.style.styles_page import create_background_shapes, global_styles
+from hojas_de_vida.style.styles_page import create_background_shapes, global_styles, fondo_about_me
 from rxconfig import config
 import hojas_de_vida.style.style_global as Style
+
 
 class State(rx.State):
     """The app state."""
@@ -41,11 +42,23 @@ def index() -> rx.Component:
     
 def about() -> rx.Component:
     return rx.box(
+        fondo_about_me(),
                 navbar(), 
-        rx.vstack(
-            componente_carta(),
-       ),
-    )
+                rx.flex(
+               componente_carta(),
+                position="absolute",
+                display="flex",
+                top="0",
+                right="0",
+                bottom="0",
+                left="0",
+                align_items="center",
+                justify_content="center",
+            ),
+            width="100%",
+            align_items="center",
+            justify_content="center",
+        ),
     
 def programadorsr() -> rx.Component:
         return rx.box(

@@ -135,184 +135,75 @@ def create_background_shapes():
         bottom="0",
         left="0",
     )
-
-
-
-# def index():
-#     """Render the complete portfolio page with styles, hero section, and background."""
-#     return rx.fragment(
-#         rx.el.link(
-#             href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css",
-#             rel="stylesheet",
-#         ),
-#         rx.el.style(
-#             """
-#         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-#         body {
-#             font-family: 'Inter', sans-serif;
-#         }
-#         @keyframes float {
-#             0%, 100% { transform: translateY(0) rotate(0deg); }
-#             50% { transform: translateY(-30px) rotate(5deg); }
-#         }
-#         @keyframes pulse {
-#             0%, 100% { opacity: 0.4; transform: scale(1); }
-#             50% { opacity: 0.8; transform: scale(1.1); }
-#         }
-#         .animate-float {
-#             animation: float 8s ease-in-out infinite;
-#         }
-#         .animate-pulse {
-#             animation: pulse 6s ease-in-out infinite;
-#         }
-#         .cube:nth-child(2n) {
-#             animation-delay: 2s;
-#         }
-#         .pyramid:nth-child(3n) {
-#             animation-delay: 3s;
-#         }
-#         .sphere:nth-child(4n) {
-#             animation-delay: 4s;
-#         }
-#         .line:nth-child(5n) {
-#             animation-delay: 1s;
-#         }
-#         .data-point:nth-child(2n) {
-#             animation-delay: 1.5s;
-#         }
-#     """
-#         ),
-#         rx.box(create_hero_section()),
-#     )
-
-def create_star(left_position, top_position):
-    """Create a single star element with the specified position."""
-    return rx.box(
-        class_name="animate-twinkle star",
-        top=top_position,
-        left=left_position,
-        position="absolute",
-        background_color="#ffffff",
-        height="0.25rem",
-        border_radius="9999px",
-        width="0.25rem",
+    
+    
+def create_icon(
+    icon_color, icon_height, icon_tag, icon_width
+):
+    """Create an icon component with specified color, height, tag, and width."""
+    return rx.icon(
+        tag=icon_tag,
+        height=icon_height,
+        color=icon_color,
+        width=icon_width,
     )
 
 
-def create_starfield():
+def fondo_about_me():
+    """Create the main page layout with background elements and profile content."""
     return rx.box(
-        create_star(
-            left_position="20%", top_position="10%"
-        ),
-        create_star(
-            left_position="40%", top_position="15%"
-        ),
-        create_star(
-            left_position="60%", top_position="25%"
-        ),
-        create_star(
-            left_position="80%", top_position="35%"
-        ),
-        create_star(
-            left_position="10%", top_position="45%"
-        ),
-        create_star(
-            left_position="30%", top_position="55%"
-        ),
-        create_star(
-            left_position="50%", top_position="65%"
-        ),
-        create_star(
-            left_position="70%", top_position="75%"
-        ),
-        create_star(
-            left_position="90%", top_position="85%"
-        ),
-        create_star(left_position="95%", top_position="5%"),
-        create_star(
-            left_position="75%", top_position="20%"
-        ),
-        create_star(
-            left_position="55%", top_position="30%"
-        ),
-        create_star(
-            left_position="35%", top_position="40%"
-        ),
-        create_star(
-            left_position="15%", top_position="50%"
-        ),
-        create_star(
-            left_position="85%", top_position="60%"
-        ),
-        create_star(left_position="5%", top_position="70%"),
-        create_star(
-            left_position="45%", top_position="80%"
-        ),
-        create_star(
-            left_position="25%", top_position="90%"
-        ),
-        create_star(
-            left_position="65%", top_position="95%"
-        ),
-        create_star(
-            left_position="88%", top_position="12%"
-        ),
-        position="absolute",
-        top="0",
-        right="0",
-        bottom="0",
-        left="0",
-    )
-
-def create_cosmos_layout():
-    """Create the main layout for the cosmos-themed page, including starfield and welcome message."""
-    return rx.box(
-        create_starfield(),
-        rx.flex(
+        rx.box(
+            class_name="bg-gradient-to-r from-white to-black",
             position="absolute",
-            display="flex",
             top="0",
-            right="0",
             bottom="0",
-            left="0",
-            align_items="center",
-            justify_content="center",
+            right="0",
+            width="50%",
         ),
-        class_name="bg-gradient-to-b from-gray-800 to-black",
+        # rx.flex(
+        #     create_profile_layout(),
+        #     position="absolute",
+        #     display="flex",
+        #     top="0",
+        #     right="0",
+        #     bottom="0",
+        #     left="0",
+        #     align_items="center",
+        #     justify_content="center",
+        # ),
+        rx.box(
+            create_icon(
+                icon_color="#D1D5DB",
+                icon_height="100%",
+                icon_tag="triangle",
+                icon_width="100%",
+            ),
+            position="absolute",
+            height="16rem",
+            left="0",
+            opacity="0.1",
+            top="0",
+            width="16rem",
+        ),
+        rx.box(
+            create_icon(
+                icon_color="#D1D5DB",
+                icon_height="100%",
+                icon_tag="circle",
+                icon_width="100%",
+            ),
+            class_name="transform",
+            position="absolute",
+            bottom="0",
+            height="16rem",
+            opacity="0.1",
+            right="0",
+            transform="rotate(180deg)",
+            width="16rem",
+        ),
+        background_color="#ffffff",
         height="100vh",
         overflow="hidden",
         position="relative",
         width="100%",
-    )
-
-
-def index():
-    """Render the complete cosmos-themed page with layout and CSS animations."""
-    return rx.fragment(
-        rx.box(
-            create_cosmos_layout(),
-            rx.el.style(
-                """
-  @keyframes twinkle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.2; }
-  }
-  .animate-twinkle {
-    animation: twinkle 3s infinite;
-  }
-  .star:nth-child(2n) {
-    animation-delay: 0.5s;
-  }
-  .star:nth-child(3n) {
-    animation-delay: 1s;
-  }
-  .star:nth-child(4n) {
-    animation-delay: 1.5s;
-  }
-  .star:nth-child(5n) {
-    animation-delay: 2s;
-  }
-"""
-            ),
-        )
     )
